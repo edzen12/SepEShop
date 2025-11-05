@@ -14,12 +14,20 @@ class Category(models.Model):
     def __str__(self):
         return self.name 
 
+    class Meta:
+        verbose_name = "категория"
+        verbose_name_plural = "Категории"
+
 
 class Size(models.Model):
     name = models.CharField(max_length=20)
     
     def __str__(self):
         return self.name 
+    
+    class Meta:
+        verbose_name = "размер"
+        verbose_name_plural = "Размеры"
 
 
 class ProductSize(models.Model):
@@ -51,6 +59,10 @@ class Product(models.Model):
     
     def __str__(self):
         return self.name 
+    
+    class Meta:
+        verbose_name = "товар"
+        verbose_name_plural = "Товары"
 
 
 class ProductImage(models.Model):
